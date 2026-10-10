@@ -14,9 +14,12 @@ script = ExtResource("1_playground")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1749039674]
 material = SubResource("ShaderMaterial_bg")
+show_behind_parent = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1154.0
+offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
