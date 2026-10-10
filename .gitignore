@@ -1,0 +1,20 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot user-specific files
+*.user
+
+# IDE
+.idea/
+.vs/
+.vscode/
+*.swp
+
+# C# build output
+[bB]in/
+[Oo]bj/
+
+# Export
+export_presets.cfg
+.zcode/
