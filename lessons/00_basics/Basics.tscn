@@ -1,21 +1,26 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://bqf2huns38s58"]
 
-[ext_resource type="Script" path="res://lessons/00_basics/ParticlePlayground.cs" id="1_playground"]
-[ext_resource type="Shader" path="res://lessons/00_basics/wave.gdshader" id="2_wave"]
+[ext_resource type="Script" uid="uid://b2rhrwp6h2ild" path="res://lessons/00_basics/ParticlePlayground.cs" id="1_playground"]
+[ext_resource type="Shader" uid="uid://c7jdpnlmr17km" path="res://lessons/00_basics/wave.gdshader" id="2_wave"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bg"]
 shader = ExtResource("2_wave")
+shader_parameter/base_color = Color(0.04, 0.05, 0.1, 1)
+shader_parameter/wave_color = Color(0.15, 0.45, 0.75, 1)
+shader_parameter/wave_strength = 0.35
 
-[node name="Basics" type="Node2D"]
+[node name="Basics" type="Node2D" unique_id=1741523944]
 script = ExtResource("1_playground")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1749039674]
 material = SubResource("ShaderMaterial_bg")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 mouse_filter = 2
 
-[node name="Particles" type="Node2D" parent="."]
+[node name="Particles" type="Node2D" parent="." unique_id=20905504]
