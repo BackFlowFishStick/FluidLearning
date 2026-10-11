@@ -18,3 +18,4 @@
 # Export
 export_presets.cfg
 .zcode/
+*.old
