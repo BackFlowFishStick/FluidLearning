@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://lessons/02_sph_2d/DensitySample.cs" id="1_density"]
+[ext_resource type="Shader" path="res://lessons/00_basics/wave.gdshader" id="2_wave"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bg"]
+shader = ExtResource("2_wave")
+
+[node name="DensitySample" type="Node2D"]
+script = ExtResource("1_density")
+
+[node name="Background" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_bg")
+show_behind_parent = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="StatsLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 700.0
+offset_bottom = 44.0
+text = "ρ: -"

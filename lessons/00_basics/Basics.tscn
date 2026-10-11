@@ -13,8 +13,8 @@ shader_parameter/wave_strength = 0.35
 script = ExtResource("1_playground")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1749039674]
-material = SubResource("ShaderMaterial_bg")
 show_behind_parent = true
+material = SubResource("ShaderMaterial_bg")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
