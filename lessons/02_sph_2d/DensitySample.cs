@@ -82,7 +82,13 @@ public partial class DensitySample : Node2D
         }
     }
 
-    /// <summary>Poly6(r, h) = 4/(π·h⁸)·(h² − r²)³。注意参数是 r²。</summary>
+    /// <summary>
+    /// Poly6(r, h) = K·(h² − r²)³，K = 4/(π·h⁸)。注意参数是 r²（预先平方好的距离）。
+    /// 逐项对应：diff = H2 − r2 就是括号内的 h² − r²（H2 = h²，r2 = r²），
+    /// 随后 diff * diff * diff 把它立方，再乘归一化常数 K。
+    /// 直接在 r² 上运算而非开方后算 (h − r)³：省一次开方，且 r = 0（粒子自身贡献）
+    /// 及极小 r 处数值更稳定——Poly6 本就是只依赖 r² 的光滑核。
+    /// </summary>
     private static float Poly6(float r2)
     {
         float diff = H2 - r2;
